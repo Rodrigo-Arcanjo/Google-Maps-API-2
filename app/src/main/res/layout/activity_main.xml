@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cod"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardOneView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp" >
+
+                <LinearLayout
+                    android:id="@+id/lnAllLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleAplication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Recurso Google Maps"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/titleTypeMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="Habilitar Estilização do Mapa?"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:id="@+id/styleMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/rgStyleMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbStyleMapNao"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:text="Sim" />
+
+                            <RadioButton
+                                android:id="@+id/rbStyleMapSim"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:text="Não" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:id="@+id/lnClickMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/titleStartMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:paddingTop="14dp"
+                            android:text="Escolha o local no Mapa*"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/imgMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_map_vector" />
+
+                        <ProgressBar
+                            android:id="@+id/progressMap"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:padding="2dp"
+                            android:indeterminateTint="#699214"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorGray" />
+
+                    <TextView
+                        android:id="@+id/titleLogradouro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="Logradouro:"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/lnEditLogradouro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtLogradouro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="2"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:textColor="@color/black" />
+
+                        <ImageButton
+                            android:id="@+id/btnSearchLogradouro"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/white"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_search" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorGray" />
+
+                    <TextView
+                        android:id="@+id/titleBairro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="Bairro:"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/lnEditBairro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtBairro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="2"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:textColor="@color/black" />
+
+                        <ImageButton
+                            android:id="@+id/btnSearchBairro"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/white"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_search" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorGray" />
+
+                    <TextView
+                        android:id="@+id/titleNumero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="Número:"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/lnEditNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtNumero"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="2"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorGray" />
+
+                    <TextView
+                        android:id="@+id/titleReferencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="Referência:"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/lnEditReferencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtReferencia"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="2"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
