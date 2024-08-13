@@ -13,3 +13,6 @@
 .cxx
 local.properties
 app/src/main/res/values
+/app/src/main/res/values/
+/app/src/main/res/values-night/
+/app/src/debug/res/values/
