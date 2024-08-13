@@ -55,7 +55,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
 
-    private GoogleMap mMap;
+    private GoogleMap mMap; // assa
     Marker marker;
     MarkerOptions markerOp;
     AdvancedMarkerOptions markerAvancedOp;
