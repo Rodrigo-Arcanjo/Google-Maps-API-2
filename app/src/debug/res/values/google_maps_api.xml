@@ -2,7 +2,7 @@
 <resources>
 
 
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyA2KnNQVa5YBxYx_7qav9Y6nrV-xcoiv4E</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">copie_sua_chave_de_conexao</string>
 
 
 </resources>
